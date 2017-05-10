@@ -1,2 +1,2 @@
 # pythonAlgorithms
-《剑指offer》 python版
+《剑指offer》 python实现版
