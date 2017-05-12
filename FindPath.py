@@ -23,7 +23,7 @@ class Solution():
         self.FindPath(root.left, expectNumber)
         self.FindPath(root.right, expectNumber)
         # 退回父节点，继续遍历
-        self.list.pop()jjj
+        self.list.pop()
         return self.result
 
 pNode1 = TreeNode(10)
