@@ -1,4 +1,4 @@
-# 将BST按照前序遍历压入栈stack，得到的是已排序的顺序
+# 将BST按照中序遍历压入栈stack，得到的是已排序的顺序
 # 接着只需要讲左孩子指针指向栈左边元素，右孩子指向右边元素
 class TreeNode():
     def __init__(self, x):
@@ -10,19 +10,20 @@ class Solution():
     def __init__(self):
         self.stack = []
 
-    def pre(self, pRootOfTree):
+    # 中序遍历
+    def mid(self, pRootOfTree):
         if not pRootOfTree:
             return None
         if pRootOfTree.left:
-           self.pre(pRootOfTree.left)
+           self.mid(pRootOfTree.left)
         self.stack.append(pRootOfTree)
         if pRootOfTree.right:
-            self.pre(pRootOfTree.right)
+            self.mid(pRootOfTree.right)
 
     def Convert(self, pRootOfTree):
         if not pRootOfTree:
             return pRootOfTree
-        self.pre(pRootOfTree)
+        self.mid(pRootOfTree)
         pRootOfTree = self.stack[0]
         preNode = self.stack[0]
         preNode.left = None
