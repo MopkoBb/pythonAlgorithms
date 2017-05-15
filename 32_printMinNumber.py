@@ -13,10 +13,8 @@ class Solution:
         s2 = n2 + n1
         print(s1, s2)
         print('******')
-        if s1 > s2:
-            return 1
-        else: return -1
-
+        return int(s1) - int(s2)
+ 
 s = Solution()
 nums = [3, 32, 321]
 result = s.PrintMinNumber(nums)
