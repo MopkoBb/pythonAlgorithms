@@ -26,6 +26,6 @@ class Solution():
         result+= left[l:]
         return result
 s = Solution()
-s.MergeSort([6,202,100,301,38,8,1])
-print(s.sum)
+a = s.MergeSort([6,202,100,301,38,8,1])
+print(a, s.sum)
 
