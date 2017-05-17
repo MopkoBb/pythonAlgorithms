@@ -40,7 +40,7 @@ class Solution():
     # 时间复杂度O(n+a+b)
     def FindFirstCommonNode2(self, pHead1, pHead2):
         if not pHead1 or not pHead2:
-            return None 
+            return None
         pCopy1, pCopy2 = pHead1, pHead2
         while pCopy1.val != pCopy2.val:
             pCopy1 = pCopy1.next
