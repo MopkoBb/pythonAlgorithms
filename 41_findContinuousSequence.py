@@ -1,15 +1,29 @@
 # -*- coding:utf-8 -*-
 class Solution():
-    def FindContinuousSquence(sum):
-        if not sum:
-            return False
-        n = 2
-        while True:
-            an = (2 * sum - n * n + n) / 2.0 * n
-            if type(an) == int: break
-            n += 1
+    def FindContinuousSquence(self, tsum):
+        if tsum < 3:
+            return []
         result = []
-        for i in range(n):
-            result.append(an)
-            an += 1
+        mid = (tsum + 1) / 2
+        start, end = 1, 2
+        rSum = start + end
+        while start < mid:
+            if rSum == tsum:
+                result.append(range(start, end+1))
+                start += 2
+                end += 1
+                print(start*2-3)
+                rSum -= start * 2 - 3
+                print(start, end, rSum)
+                rSum += end
+            elif rSum < tsum:
+                end += 1
+                rSum += end
+            else:
+                rSum -= start
+                start += 1
         return result
+
+s = Solution()
+a = s.FindContinuousSquence(100)
+print(a)
