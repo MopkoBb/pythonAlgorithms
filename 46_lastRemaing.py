@@ -25,6 +25,16 @@ class Solution():
             return 0
         else:
             return (self.LastRemaining_Solution2(n-1, m) + m) % n
+
+    # 使用循环效率高很多
+    def LastRemaining_Solution3(self, n, m):
+        if n < 1:
+            return -1
+        flag, result = 2, 0
+        while flag <= n:
+            result = (result + m) % flag
+            flag += 1
+        return result
 s = Solution()
-a = s.LastRemaining_Solution(4000, 997)
+a = s.LastRemaining_Solution3(4000, 997)
 print(a)
