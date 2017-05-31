@@ -12,9 +12,7 @@ class Solution():
                 result.append(range(start, end+1))
                 start += 2
                 end += 1
-                print(start*2-3)
                 rSum -= start * 2 - 3
-                print(start, end, rSum)
                 rSum += end
             elif rSum < tsum:
                 end += 1

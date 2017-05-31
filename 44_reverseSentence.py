@@ -2,7 +2,7 @@
 class Solution():
     def ReverseSentence(self, string):
         if not string:
-            return False
+            return ""
         sList = string.split(' ')
         sList.reverse()
         return ' '.join(sList)
